@@ -5,7 +5,7 @@ module YoutubeDL
     end
 
     def self.download_audio(url)
-      `ruby-youtube-dl --no-progress --get-filename --extract-audio --audio-format=mp3 -tAqs #{url}`.strip
+      `ruby-youtube-dl --no-progress --get-filename --extract-audio --audio-format=mp3 -tAq #{url}`.strip
     end
   end
 end
