@@ -1,7 +1,7 @@
 module YoutubeDL
   class Downloader
     def self.download_video(url)
-      `ruby-youtube-dl --no-progress --get-filename -q #{url}`.strip
+      `ruby-youtube-dl --no-progress --get-filename  #{url}`.strip
     end
 
     def self.download_audio(url, location="/tmp/")
