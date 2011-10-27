@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = YoutubeDL::VERSION
   s.authors     = ["Ben Morris"]
   s.email       = ["ben@bnmrrs.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/bnmrrs/ruby-youtube-dl"
   s.summary     = %q{Wrapper around the youtube-dl python lib}
   s.description = %q{Wraps youtube-dl for easy package management}
 
