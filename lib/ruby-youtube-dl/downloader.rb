@@ -5,7 +5,10 @@ module YoutubeDL
     end
 
     def self.download_audio(url, location="/tmp/")
-      `./youtube-dl.py --no-progress --extract-audio --audio-format=mp3  --output="#{location}%(stitle)s-%(uploader)s-%(autonumber)s.mp3" #{url}`.strip
+      output = `ruby-youtube-dl --no-progress --extract-audio --audio-format=mp3  --output="#{location}%(stitle)s-%(uploader)s-%(autonumber)s.mp3" #{url}`.strip
+      file_path = output.match(/.+Destination: (.+)/)[1]
+
+      open(file_path)
     end
   end
 end
