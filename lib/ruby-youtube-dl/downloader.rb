@@ -10,5 +10,15 @@ module YoutubeDL
 
       open(file_path)
     end
+
+    # Retrieves the actual uri of the flv.
+    def self.url_flv(url)
+        return `ruby-youtube-dl --no-progress -g  #{url}`.strip
+    end
+
+    # Retrieves the video title
+    def self.video_title(url)
+        return `ruby-youtube-dl --no-progress -e #{url}`.strip
+    end
   end
 end
