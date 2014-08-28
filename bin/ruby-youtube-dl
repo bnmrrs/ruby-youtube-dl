@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
-
-puts `#{File.expand_path(File.dirname(__FILE__))}/youtube-dl.py #{ARGV.join(" ")}`
+cmd = "command -v 'youtube-dl'"
+command = `#{cmd}`
+if not command
+    command = "#{File.expand_path(File.dirname(__FILE__))}/youtube-dl.py"
+end
+puts `#{command} #{ARGV.join(" ")}`
